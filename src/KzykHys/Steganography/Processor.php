@@ -3,7 +3,7 @@
 namespace KzykHys\Steganography;
 
 use KzykHys\Steganography\Compressor\ZlibCompressor;
-use KzykHys\Steganography\DataHandler\DefaultDataHandler;
+use KzykHys\Steganography\Encoder\DefaultEncoder;
 use KzykHys\Steganography\Image\Image;
 use KzykHys\Steganography\Iterator\BinaryIterator;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -23,7 +23,7 @@ class Processor
     private $compressor;
 
     /**
-     * @var DataHandlerInterface
+     * @var EncoderInterface
      */
     private $handler;
 
@@ -32,7 +32,7 @@ class Processor
      */
     public function __construct()
     {
-        $this->handler    = new DefaultDataHandler();
+        $this->handler    = new DefaultEncoder();
         $this->compressor = new ZlibCompressor();
     }
 
@@ -101,7 +101,7 @@ class Processor
     }
 
     /**
-     * @param DataHandlerInterface $handler
+     * @param EncoderInterface $handler
      *
      * @return $this
      */
@@ -113,7 +113,7 @@ class Processor
     }
 
     /**
-     * @return DataHandlerInterface
+     * @return EncoderInterface
      */
     public function getHandler()
     {

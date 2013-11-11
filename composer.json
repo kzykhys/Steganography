@@ -1,6 +1,6 @@
 {
     "name": "kzykhys/steganography",
-    "description": "Hide a hidden message within an image",
+    "description": "Simple implementation of Steganography (Hiding a hidden message within an image)",
     "minimum-stability": "stable",
     "authors": [
         {

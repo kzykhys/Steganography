@@ -1,15 +1,15 @@
 <?php
 
-namespace KzykHys\Steganography\DataHandler;
+namespace KzykHys\Steganography\Encoder;
 
 use KzykHys\Steganography\CompressorInterface;
-use KzykHys\Steganography\DataHandlerInterface;
+use KzykHys\Steganography\EncoderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
  * @author Kazuyuki Hayashi
  */
-class DefaultDataHandler implements DataHandlerInterface
+class DefaultEncoder implements EncoderInterface
 {
 
     /**
