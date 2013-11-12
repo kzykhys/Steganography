@@ -1,11 +1,13 @@
 {
     "name": "kzykhys/steganography",
     "description": "Simple implementation of Steganography (Hiding a hidden message within an image)",
+    "license": "MIT",
+    "keywords": ["steganography"],
     "minimum-stability": "stable",
     "authors": [
         {
-            "name": "author's name",
-            "email": "email@example.com"
+            "name": "Kazuyuki Hayashi",
+            "email": "hayashi@valnur.net"
         }
     ],
     "require": {
