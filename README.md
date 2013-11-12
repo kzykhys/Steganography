@@ -3,15 +3,28 @@ Steganography
 
 Simple implementation of Steganography (Hiding a hidden message within an image)
 
+Requirements
+------------
+
+* PHP5.4+
+
 Installation
 ------------
 
-``` json
+Update your composer.json and run `composer update`
 
+``` json
+{
+    "require": {
+        "kzykhys/steganography": "dev-master"
+    }
+}
 ```
 
 Usage
 -----
+
+### Put your message into an image
 
 ``` php
 <?php
@@ -28,6 +41,8 @@ $image->write('/path/to/image.png'); // png only
 $image->render();
 ```
 
+### Extract message from an image
+
 ``` php
 <?php
 
@@ -39,3 +54,12 @@ $message = $processor->decode('/path/to/image.png');
 echo $message; // "Message to hide"
 ```
 
+License
+-------
+
+The MIT License
+
+Author
+------
+
+Kazuyuki Hayashi (@kzykhys)
