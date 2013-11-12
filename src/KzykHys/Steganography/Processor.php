@@ -25,14 +25,14 @@ class Processor
     /**
      * @var EncoderInterface
      */
-    private $handler;
+    private $encoder;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->handler    = new DefaultEncoder();
+        $this->encoder    = new DefaultEncoder();
         $this->compressor = new ZlibCompressor();
     }
 
@@ -101,13 +101,13 @@ class Processor
     }
 
     /**
-     * @param EncoderInterface $handler
+     * @param EncoderInterface $encoder
      *
      * @return $this
      */
-    public function setHandler($handler)
+    public function setEncoder($encoder)
     {
-        $this->handler = $handler;
+        $this->encoder = $encoder;
 
         return $this;
     }
@@ -115,9 +115,9 @@ class Processor
     /**
      * @return EncoderInterface
      */
-    public function getHandler()
+    public function getEncoder()
     {
-        return $this->handler;
+        return $this->encoder;
     }
 
     /**
@@ -129,10 +129,10 @@ class Processor
     protected function encodeMessage($message, array $options = [])
     {
         $resolver = new OptionsResolver();
-        $this->handler->setDefaultOptions($resolver);
+        $this->encoder->setDefaultOptions($resolver);
         $options = $resolver->resolve($options);
 
-        return $this->handler->encode($message, $this->compressor, $options);
+        return $this->encoder->encode($message, $this->compressor, $options);
     }
 
     /**
@@ -144,10 +144,10 @@ class Processor
     protected function decodeMessage($binary, array $options = [])
     {
         $resolver = new OptionsResolver();
-        $this->handler->setDefaultOptions($resolver);
+        $this->encoder->setDefaultOptions($resolver);
         $options = $resolver->resolve($options);
 
-        return $this->handler->decode($binary, $this->compressor, $options);
+        return $this->encoder->decode($binary, $this->compressor, $options);
     }
 
 } 

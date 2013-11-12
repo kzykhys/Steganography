@@ -37,5 +37,23 @@ class ProcessorTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $message);
     }
 
+    public function testEncoder()
+    {
+        $processor = new Processor();
+        $processor->setEncoder(new \KzykHys\Steganography\Encoder\DefaultEncoder());
+
+        $this->assertInstanceOf('KzykHys\\Steganography\\EncoderInterface', $processor->getEncoder());
+    }
+
+    /**
+     * @expectedException \RuntimeException
+     */
+    public function testInvalidCompressor()
+    {
+        require_once __DIR__ . '/Resources/stub/InvalidCompressor.php';
+
+        $processor = new Processor();
+        $processor->setCompressor(new InvalidCompressor());
+    }
 
 } 
