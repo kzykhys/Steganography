@@ -1,6 +1,11 @@
 Steganography
 =============
 
+[![Latest Unstable Version](https://poser.pugx.org/kzykhys/steganograpy/v/unstable.png)](https://packagist.org/packages/kzykhys/steganograpy)
+[![Build Status](https://travis-ci.org/kzykhys/Steganography.png?branch=master)](https://travis-ci.org/kzykhys/Steganography)
+![Coverage Status](https://coveralls.io/repos/kzykhys/Steganography/badge.png)](https://coveralls.io/r/kzykhys/Steganography)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/28e8157b-8b33-4d52-8eda-986a1bffca1d/mini.png)](https://insight.sensiolabs.com/projects/28e8157b-8b33-4d52-8eda-986a1bffca1d)
+
 Simple PHP implementation of Steganography (Hiding a hidden message within an image)
 
 Requirements
