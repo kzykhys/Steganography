@@ -3,21 +3,21 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "dc2b9cd59732e065d1017245e553ecee",
+    "hash": "9958091ce8a5d29cce22b6270f58556d",
     "packages": [
         {
             "name": "symfony/options-resolver",
-            "version": "v2.3.6",
+            "version": "v2.4.1",
             "target-dir": "Symfony/Component/OptionsResolver",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/OptionsResolver.git",
-                "reference": "d7a1df61ce5cb0c9c9e502f959d4d8ede532439a"
+                "reference": "2b7145803c970e62ac521b2b0984b4bb67209561"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/OptionsResolver/zipball/d7a1df61ce5cb0c9c9e502f959d4d8ede532439a",
-                "reference": "d7a1df61ce5cb0c9c9e502f959d4d8ede532439a",
+                "url": "https://api.github.com/repos/symfony/OptionsResolver/zipball/2b7145803c970e62ac521b2b0984b4bb67209561",
+                "reference": "2b7145803c970e62ac521b2b0984b4bb67209561",
                 "shasum": ""
             },
             "require": {
@@ -26,7 +26,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -55,7 +55,7 @@
                 "configuration",
                 "options"
             ],
-            "time": "2013-09-19 09:45:20"
+            "time": "2013-09-19 09:47:34"
         }
     ],
     "packages-dev": [
