@@ -81,7 +81,7 @@ class Processor
      *
      * @return $this
      */
-    public function setCompressor($compressor)
+    public function setCompressor(CompressorInterface $compressor)
     {
         if (!$compressor->isSupported()) {
             throw new \RuntimeException('Unsupported type of compressor: ' . $compressor->getName());
