@@ -18,9 +18,10 @@ class DefaultEncoder implements EncoderInterface
     public function encode($data, CompressorInterface $compressor, array $options = [])
     {
         $compressed = base64_encode($compressor->compress($data));
-        $bin = '';
+        $bin        = '';
+        $length     = strlen($compressed);
 
-        for ($i = 0; $i < strlen($compressed); $i++) {
+        for ($i = 0; $i < $length; $i++) {
             $bin .= sprintf('%08b', ord($compressed[$i]));
         }
 
