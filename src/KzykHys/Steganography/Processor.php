@@ -51,6 +51,7 @@ class Processor
 
         if(array_key_exists('compression', $options)) {
             $compression = $options['compression'];
+            unset($options['compression']);
         }
 
         $image   = new Image($file, $compression);

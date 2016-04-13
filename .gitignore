@@ -1,3 +1,5 @@
 /vendor/
 /test/KzykHys/Steganography/Resources/out/*
 composer.phar
+phpunit.xml
+composer.lock
