@@ -47,7 +47,13 @@ class Processor
      */
     public function encode($file, $message, array $options = [])
     {
-        $image   = new Image($file);
+        $compression = 0;
+
+        if(array_key_exists('compression', $options)) {
+            $compression = $options['compression'];
+        }
+
+        $image   = new Image($file, $compression);
         $message = $this->encodeMessage($message, $options);
         $pixels  = ceil(strlen($message) / self::BITS_PER_PIXEL + (self::LENGTH_BITS / self::BITS_PER_PIXEL));
 
