@@ -1,38 +1,42 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
     "hash": "9958091ce8a5d29cce22b6270f58556d",
+    "content-hash": "4fb0803c85b3ae1918d78f134bbcccb2",
     "packages": [
         {
             "name": "symfony/options-resolver",
-            "version": "v2.4.1",
-            "target-dir": "Symfony/Component/OptionsResolver",
+            "version": "v2.8.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/OptionsResolver.git",
-                "reference": "2b7145803c970e62ac521b2b0984b4bb67209561"
+                "url": "https://github.com/symfony/options-resolver.git",
+                "reference": "496d650b0137e57c2920eb14f9d366ff506761a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/OptionsResolver/zipball/2b7145803c970e62ac521b2b0984b4bb67209561",
-                "reference": "2b7145803c970e62ac521b2b0984b4bb67209561",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/496d650b0137e57c2920eb14f9d366ff506761a8",
+                "reference": "496d650b0137e57c2920eb14f9d366ff506761a8",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.8-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Symfony\\Component\\OptionsResolver\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -45,33 +49,25 @@
                 },
                 {
                     "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony OptionsResolver Component",
-            "homepage": "http://symfony.com",
+            "homepage": "https://symfony.com",
             "keywords": [
                 "config",
                 "configuration",
                 "options"
             ],
-            "time": "2013-09-19 09:47:34"
+            "time": "2016-03-04 07:54:35"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
-    "platform": [
-
-    ],
-    "platform-dev": [
-
-    ]
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
 }

@@ -38,17 +38,27 @@ class Image
     private $pixels = 0;
 
     /**
+     * @var int
+     *
+     * Compression level, 0 [uncompressed] through 9
+     * PNG compression is lossless.
+     */
+    private $compression = 0;
+
+    /**
      * @param string $path
+     * @param integer $compression
      *
      * @throws \InvalidArgumentException
      */
-    public function __construct($path)
+    public function __construct($path, $compression = 0)
     {
         if (!file_exists($path)) {
             throw new \InvalidArgumentException('File Not Found: ' . $path);
         }
 
         $this->path = $path;
+        $this->compression = $compression;
 
         $this->initialize();
     }
@@ -143,7 +153,7 @@ class Image
      */
     public function write($path)
     {
-        return imagepng($this->image, $path, 0);
+        return imagepng($this->image, $path, $this->compression);
     }
 
     /**
@@ -151,7 +161,7 @@ class Image
      */
     public function render()
     {
-        return imagepng($this->image, null, 0);
+        return imagepng($this->image, null, $this->compression);
     }
 
     /**

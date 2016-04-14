@@ -37,6 +37,31 @@ class ProcessorTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $message);
     }
 
+    public function testCompressEncode()
+    {
+        $message = 'a48995845f83ee779c632fd1225224e0e07380fc61da8f495f3e25760fc0e0029034ca41960adb81aeceee4902a1163b';
+
+        $processor = new Processor();
+        $image = $processor->encode(__DIR__ . '/Resources/img/koala.jpg', $message,
+                                    array('compression' => 9));
+        $image->write(__DIR__ . '/Resources/out/koala_out_comp.png');
+
+        return $message;
+    }
+
+    /**
+     * @param string $expected
+     * @depends testCompressEncode
+     */
+    public function testCompressDecode($expected)
+    {
+        $processor = new Processor();
+        $message = $processor->decode(__DIR__ . '/Resources/out/koala_out_comp.png');
+
+        $this->assertEquals($expected, $message);
+    }
+
+
     public function testEncoder()
     {
         $processor = new Processor();
